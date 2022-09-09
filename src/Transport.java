@@ -16,4 +16,6 @@ public abstract class Transport {
         System.out.println("Меняем покрышку");
     }
 
+    public abstract void Service();
+
 }

@@ -12,8 +12,8 @@ public class Truck extends Transport implements  ServiceTransport {
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
-
-    public void ServiceTruck() {
+    @Override
+    public void Service() {
             System.out.println("Обслуживаем " + this.getModelName());
             for (int i = 0; i < this.getWheelsCount(); i++) {
                 this.updateTyre();
