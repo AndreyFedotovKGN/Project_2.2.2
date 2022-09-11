@@ -1,10 +1,10 @@
-public class Car extends Transport implements  ServiceTransport  {
+public class Car extends Transport implements  ServiceOfTransportWithAnEngine  {
 
     public Car(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
     @Override
-    public void Service() {
+    public void service() {
         System.out.println("Обслуживаем " + this.getModelName());
         for (int i = 0; i < this.getWheelsCount(); i++) {
             this.updateTyre();
@@ -14,8 +14,12 @@ public class Car extends Transport implements  ServiceTransport  {
 
     @Override
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель автомобиля");
     }
 
+    @Override
+    public void updateTyre() {
+        System.out.println("Меняем покрышку автомобиля");
+    }
 
 }

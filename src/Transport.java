@@ -12,10 +12,8 @@ public abstract class Transport {
     public int getWheelsCount() {
         return wheelsCount;
     }
-    public void updateTyre(){
-        System.out.println("Меняем покрышку");
-    }
+    public abstract void updateTyre();
 
-    public abstract void Service();
+    public abstract void service();
 
 }
